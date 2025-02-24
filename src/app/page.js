@@ -41,7 +41,7 @@ export default function Home() {
 
   useEffect(() => {
     if (showIntro && hasInteracted) {
-      const fullText = "Forever begins today. Welcome to our wedding ";
+      const fullText = "On this special day, two hearts become one. Welcome to our love story...";
       let currentIndex = 0;
 
       const typingAnimation = anime.timeline({
@@ -405,13 +405,22 @@ export default function Home() {
       {showIntro ? (
         <div className="h-screen flex items-center justify-center bg-gradient-to-br from-pink-50 via-white to-rose-50">
           {!hasInteracted ? (
-            <button
-              onClick={handleStart}
-              className="bg-white/80 px-8 py-4 rounded-full shadow-lg hover:bg-white/90 
-                transition-all text-xl font-serif text-gray-700 hover:scale-105"
-            >
-              點擊開始
-            </button>
+            <div className="text-center space-y-6">
+              <h1 className="text-3xl md:text-4xl font-serif text-gray-700 mb-8">
+                Calvin & Jestina
+              </h1>
+              <button
+                onClick={handleStart}
+                className="bg-white/80 px-8 py-4 rounded-full shadow-lg hover:bg-white/90 
+                  transition-all text-xl font-serif text-gray-700 hover:scale-105
+                  border border-pink-100 hover:border-pink-200"
+              >
+                ✧ 點擊開啟我們的愛情故事 ✧
+              </button>
+              <p className="text-sm text-gray-500 mt-4 animate-pulse">
+                開啟音效以獲得最佳體驗
+              </p>
+            </div>
           ) : (
             <div className="typing-text text-center px-4">
               <div className="font-serif text-4xl md:text-5xl lg:text-6xl text-gray-800 leading-relaxed">
